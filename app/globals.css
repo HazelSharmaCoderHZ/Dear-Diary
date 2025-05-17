@@ -1,0 +1,178 @@
+
+
+@import "tailwindcss";
+@import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer utilities {
+  .typewriter-loop {
+    overflow: hidden;
+    white-space: nowrap;
+    border-right: 4px solid rgba(245, 225, 255, 0.8);
+    width: 0ch;
+    animation: typeErase 7s steps(12,end) infinite,
+               blink 0.8s step-end infinite;
+  }
+
+  @keyframes typeErase {
+    
+      0% {
+        width: 0ch;
+      }
+      30% {
+        width: 11ch; /* actual char count of 'Dear Diary,' */
+      }
+      50% {
+        width: 11ch;
+      }
+      80% {
+        width: 0ch;
+      }
+      100% {
+        width: 0ch;
+      }
+    
+    
+  }
+
+  @keyframes blink {
+    0%, 100% {
+      border-color: transparent;
+    }
+    50% {
+      border-color: rgba(245, 225, 255, 0.8);
+    }
+  }
+}
+
+
+:root {
+  --background: #ffffff;
+  --foreground: #171717;
+  --font-sans: Arial, Helvetica, sans-serif;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #0a0a0a;
+    --foreground: #ededed;
+  }
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-sans);
+}
+@keyframes fadeUp {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-fadeUp {
+  animation: fadeUp 4s ease-out forwards;
+}
+@keyframes pulseGlow {
+  0% {
+    box-shadow: 0 0 0 0 rgba(186, 85, 211, 0.6);
+  }
+  60% {
+    box-shadow: 0 0 0 10px rgba(186, 85, 211, 0);
+  }
+  100% {
+    box-shadow: 0 0 0 0 rgba(186, 85, 211, 0);
+  }
+}
+
+.animate-pulseGlow {
+  animation: pulseGlow 2s infinite;
+}
+.image-container {
+  position: relative;
+  width: 100%;
+  height: auto;
+}
+
+
+
+.background-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.centered-text {
+  font-family: 'Pacifico', cursive;
+  position: absolute;
+  top: 24%; 
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 7rem;
+  font-weight: 900;
+  color: #fcf4fc;
+  font-family: 'Cursive', 'Pacifico', 'Geist', sans-serif;
+  z-index: 1;
+  letter-spacing: 3px;
+  animation: glow 2s ease-in-out infinite ;
+}
+
+
+.login-box {
+  position: absolute;
+  bottom: 5%;
+  right: 5%;
+  background-color: rgba(255, 255, 255, 0.1);
+  padding: 2rem;
+  border-radius: 15px;
+  box-shadow: 0 0 25px rgba(0, 0, 0, 0.4);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  color: white;
+  z-index: 10;
+  width: 300px;
+}
+
+.login-box h2 {
+  margin-bottom: 1rem;
+  font-size: 1.5rem;
+}
+
+.login-box input {
+  width: 100%;
+  padding: 0.6rem;
+  margin-bottom: 1rem;
+  border: none;
+  border-radius: 8px;
+  outline: none;
+}
+
+.login-box button {
+  width: 100%;
+  padding: 0.6rem;
+  background-color: #ffd700;
+  color: black;
+  border: none;
+  border-radius: 8px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.login-box button:hover {
+  background-color: #e6c200;
+}
+.login-container {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+}
