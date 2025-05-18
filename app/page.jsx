@@ -47,26 +47,21 @@ export default function LoginCard() {
       </motion.div>
 
 
-      <div className="absolute bottom-10 right-15 bg-white bg-opacity-1 border-opacity-5 backdrop-blur-xl border p-5 rounded-3xl shadow-2xl z-10  w-[29rem]">
+      <div className="absolute bottom-10 right-15 bg-white bg-opacity-1 border-opacity-5 backdrop-blur-xl border p-4 rounded-3xl shadow-2xl z-10  w-[27rem]">
        <h2 className="text-center text-lg font-semibold mb-1">LOGIN</h2>
        <form className="flex flex-col space-y-2">
         <input
-          type="text"
-          placeholder="Username"
-          className="w-full p-0.9 mb-2 border border-gray-400 rounded focus:outline-none focus:ring-2 focus:ring-purple-500"
-        />
-        <input
           type="email"
           placeholder="Email"
-          className="w-full p-0.9 mb-2 border border-gray-400 rounded focus:outline-none focus:ring-2 focus:ring-purple-500"
+          className="w-full p-1.2 mb-2 border border-gray-400 rounded focus:outline-none focus:ring-2 focus:ring-purple-500"
         />
         <input
           type="password"
           placeholder="Password"
-          className="w-full p-0.9 mb-2 border bg-white bg-opacity-40 border-gray-400 rounded focus:outline-none focus:ring-2 focus:ring-purple-500"
+          className="w-full p-1.2 mb-2 border bg-white bg-opacity-40 border-gray-400 rounded focus:outline-none focus:ring-2 focus:ring-purple-500"
         />
 
-        <button className="w-full bg-purple-900 text-white p-2 rounded hover:bg-purple-400 transition">
+        <button className="w-full bg-purple-800 text-white p-2 rounded hover:bg-purple-400 transition">
           🌙 Open My Diary
         </button>
 

@@ -21,9 +21,9 @@ export default function SignupPage() {
   };
 
   return (
-    <div className="min-h-screen flex flex-col items-center justify-center bg-gradient-to-r from-pink-100 via-rose-200 to-pink-100">
+    <div className="min-h-screen flex flex-col items-center justify-center bg-black">
       <div className="bg-white p-10 rounded-2xl shadow-md text-center max-w-sm w-full">
-        <h1 className="text-3xl font-bold mb-4 text-rose-600">Create Your Account</h1>
+        <h1 className="text-3xl font-bold mb-4 text-purple-600">Create Your Account</h1>
         <form onSubmit={handleSignup}>
           <input
             type="email"
@@ -43,14 +43,14 @@ export default function SignupPage() {
           />
           <button
             type="submit"
-            className="bg-rose-500 text-white py-2 px-4 rounded-xl hover:bg-rose-600 transition w-full"
+            className="bg-purple-700 text-white py-2 px-4 rounded-xl hover:bg-purple-300 transition w-full"
           >
             Sign Up
           </button>
         </form>
         <p className="mt-4 text-sm text-gray-500">
           Already have an account? {" "}
-          <a href="/" className="text-rose-600 underline hover:text-rose-800">
+          <a href="/" className="text-purple-700 underline hover:text-purple-300">
             Go to Login
           </a>
         </p>
