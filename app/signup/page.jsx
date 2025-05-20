@@ -21,16 +21,17 @@ export default function SignupPage() {
   };
 
   return (
-    <div className="min-h-screen flex flex-col items-center justify-center bg-black">
-      <div className="bg-white p-10 rounded-2xl shadow-md text-center max-w-sm w-full">
-        <h1 className="text-3xl font-bold mb-4 text-purple-600">Create Your Account</h1>
+   <div className= "animatedbg">
+    <div className="min-h-screen flex flex-col items-center justify-center">
+      <div className="bg-black-800 bg-opacity-50 backdrop-blur-md p-11 rounded-2xl shadow-md text-center max-w-ls w-full">
+        <h1 className="text-6xl font-bold mb-3 text-cyan-100">Create Your Account</h1>
         <form onSubmit={handleSignup}>
           <input
             type="email"
             placeholder="Email"
             value={email}
             onChange={(e) => setEmail(e.target.value)}
-            className="block w-full mb-4 border p-2 rounded"
+            className="block w-full mb-3 bg-white/10 text-white placeholder-gray-300 border border-white/30 p-2 rounded"
             required
           />
           <input
@@ -38,23 +39,25 @@ export default function SignupPage() {
             placeholder="Password"
             value={password}
             onChange={(e) => setPassword(e.target.value)}
-            className="block w-full mb-4 border p-2 rounded"
+            className="block w-full mb-3 bg-white/10 text-white placeholder-gray-300 border border-white/30 p-2 rounded"
             required
           />
           <button
             type="submit"
-            className="bg-purple-700 text-white py-2 px-4 rounded-xl hover:bg-purple-300 transition w-full"
+            className="bg-purple-500 text-white py-2 px-4 rounded-xl hover:bg-purple-300 transition w-50"
           >
             Sign Up
           </button>
         </form>
-        <p className="mt-4 text-sm text-gray-500">
+        <p className="mt-4 text-sm text-cyan-100">
           Already have an account? {" "}
-          <a href="/" className="text-purple-700 underline hover:text-purple-300">
+          <a href="/" className="text-cyan-300 underline hover:text-cyan-700">
             Go to Login
           </a>
         </p>
+       
       </div>
     </div>
+   </div>  
   );
 }

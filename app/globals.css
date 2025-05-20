@@ -176,3 +176,27 @@ body {
   height: 100vh;
   overflow: hidden;
 }
+
+.animatedbg {
+  background: linear-gradient(-45deg, #ff0080, #7928ca, #9e58c1, #580404);
+  background-size: 400% 400%;
+  animation: gradientBG 13s ease infinite;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  
+}
+
+
+@keyframes gradientBG {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
