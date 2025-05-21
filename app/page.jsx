@@ -30,7 +30,7 @@ export default function LoginCard() {
         <h1 className="text-8xl sm:text-8.5xl mt-12 font-extrabold text-grey-100 font-serif typewriter-loop">
           Dear Diary,<span className="animate-blink"></span>
         </h1>
-        <p className="text-2xl sm:text-3xl italic tracking-wide font-bold mt-2 text-cyan-200 drop-shadow-xl">
+        <p className="text-2xl sm:text-2xl italic tracking-wide font-bold mt-2 text-cyan-200 drop-shadow-xl">
           Write <span className="mx-1">|</span> Reflect <span className="mx-1">|</span> Grow
         </p>
       </motion.div>

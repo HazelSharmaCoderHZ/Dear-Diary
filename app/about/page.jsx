@@ -8,12 +8,12 @@ export default function AboutPage() {
       <div className="absolute top-0 left-0 w-full h-full bg-fixed bg-cover bg-center z-0" style={{ backgroundImage: "url('/bg.png')" }}></div>
 
       <div className="relative z-10 flex flex-col items-center justify-center h-full backdrop-blur-md bg-black bg-opacity-40 p-10">
-        <h1 className="text-6xl font-bold mb-6"><span className="text-white">About </span><span className="text-purple-400">Dear Diary</span> </h1>
-        <div className="w-1/2 h-1 bg-purple-400 my-4 mx-auto"></div>
+        <h1 className="text-6xl font-bold mb-6"><span className="text-white">About </span><span className="text-cyan-400">Dear Diary</span> </h1>
+        <div className="w-1/2 h-1 bg-cyan-400 my-4 mx-auto"></div>
         <p className="max-w-2xl text-center text-lg">
           <br></br>Dear Diary is more than just a journaling app — it’s your personal space to reflect, express, and feel safe. Built with care and emotions, it helps you track your feelings day by day with a warm, calming design.
         </p>
-        <Link href="/" className="mt-10 text-purple-300 hover:underline">
+        <Link href="/" className="mt-10 text-cyan-300 hover:underline">
           ⬅ Back to Login
         </Link>
       </div>

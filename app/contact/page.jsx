@@ -13,7 +13,7 @@ export default function ContactPage() {
           We'd love to hear from you! Reach out at 
           <a 
            href="mailto:sharmahazel310@gmail.com" 
-           className="underline text-purple-300 mx-1"
+           className="underline text-cyan-300 mx-1"
           >
            Hazel@deardiary.app
           </a> 
@@ -22,13 +22,13 @@ export default function ContactPage() {
            href="https://www.linkedin.com/in/hazelsharma-it" 
            target="_blank" 
            rel="noopener noreferrer" 
-           className="underline text-purple-300 mx-1"
+           className="underline text-cyan-300 mx-1"
           >
           Founder@DearDiary
           </a>.
         </p>
 
-        <Link href="/" className="mt-10 text-purple-300 hover:underline">
+        <Link href="/" className="mt-10 text-cyan-300 hover:underline">
           ⬅ Back to Login
         </Link>
       </div>
