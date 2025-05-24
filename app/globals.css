@@ -203,7 +203,28 @@ body {
 .firstpageanim{
   background: linear-gradient(-45deg, #db016e, #6a1cb7, #833fa5, #580404);
   background-size: 400% 400%;
-  animation: gradientBGG 13s ease infinite;
+  animation: gradientBGG 15s ease infinite;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+@keyframes gradientBGG {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+.secondpageanim{
+  background: linear-gradient(-45deg, #460c29, #371c52, #170c1d, #340404);
+  background-size: 400% 400%;
+  animation: gradientBGG 16s ease infinite;
   height: 100vh;
   display: flex;
   justify-content: center;
