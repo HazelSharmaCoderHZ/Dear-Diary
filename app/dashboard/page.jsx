@@ -26,21 +26,32 @@ export default function DashboardPage() {
   return (
     <div className="secondpageanim">
      <div className="min-h-screen flex flex-col items-center justify-center text-white px-4">
-      <motion.h1
-        initial={{ opacity: 0, y: -40 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 1 }}
-        className="text-5xl sm:text-6xl font-extrabold mb-10 text-center font-serif"
-      >
-        Welcome to Your Diary 
-      </motion.h1>
+      <motion.div
+       initial={{ opacity: 0 }}
+       animate={{ opacity: 1 }}
+       transition={{ duration: 1.5, delay: 0.5 }}
+       className="mt-13 max-w-3xl px-6 sm:px-8 text-center"
+       >
+      <h2 className="text-4xl sm:text-5xl font-bold font-serif text-white relative inline-block pb-3 mb-5">
+       Welcome to Your Diary
+      <span className="block w-20 h-1 bg-white/60 mx-auto mt-2 rounded-full"></span>
+      </h2>
 
-      <div className="flex flex-col sm:flex-row gap-8">
+       <p className="text-base sm:text-lg text-white/90 leading-relaxed">
+       ✨ Your thoughts are safe with us ✨ <br></br>
+        Studies show that journaling can ease anxiety,
+       improve self-awareness, and even help you sleep better. By penning your feelings,
+       you’re not just documenting moments — you’re nurturing your emotional well-being. <br></br>
+       </p>
+     </motion.div>
+
+
+      <div className="flex flex-col sm:flex-row mt-7 gap-20">
         <motion.button
           whileHover={{ scale: 1.05 }}
           whileTap={{ scale: 0.95 }}
           onClick={() => router.push("/addnote")}
-          className="bg-cyan-200 bg-opacity-50 backdrop-blur-md hover:bg-cyan-400 text-white px-8 py-4 rounded-2xl shadow-lg text-xl font-semibold transition duration-300"
+          className="bg-purple/300 bg-opacity-90 backdrop-blur-md hover:bg-purple-400 text-white px-8 py-4 rounded-2xl shadow-lg text-xl font-semibold transition duration-300"
         >
           ✍️ Pen Today’s Thought
         </motion.button>
@@ -53,6 +64,7 @@ export default function DashboardPage() {
         >
           📖 Revisit Old Pages
         </motion.button>
+
       </div>
      </div> 
     </div>
