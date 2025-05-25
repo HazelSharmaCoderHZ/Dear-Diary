@@ -17,6 +17,75 @@
                blink 0.8s step-end infinite;
   }
 
+  @keyframes float1 {
+  0% {
+    transform: translate(0, 0) scale(1);
+  }
+  50% {
+    transform: translate(-25px, -35px) scale(1.1);
+  }
+  100% {
+    transform: translate(0, 0) scale(1);
+  }
+  }
+
+  @keyframes float2 {
+  0% {
+    transform: translate(0, 0) scale(1);
+  }
+  50% {
+    transform: translate(30px, -25px) scale(0.95);
+  }
+  100% {
+    transform: translate(0, 0) scale(1);
+  }
+  }
+
+  @keyframes float3 {
+  0% {
+    transform: translate(0, 0) scale(1);
+  }
+  50% {
+    transform: translate(-20px, -40px) scale(1.05) rotate(5deg);
+  }
+  100% {
+    transform: translate(0, 0) scale(1);
+  }
+  }
+
+  @keyframes float4 {
+  0% {
+    transform: translate(0, 0) scale(1);
+  }
+  50% {
+    transform: translate(25px, -10px) scale(1.2) rotate(-3deg);
+  }
+  100% {
+    transform: translate(0, 0) scale(1);
+  }
+  }
+
+  @keyframes float5 {
+  0% {
+    transform: translate(0, 0) scale(1);
+  }
+  50% {
+    transform: translate(-30px, -30px) scale(0.9) rotate(2deg);
+  }
+  100% {
+    transform: translate(0, 0) scale(1);
+  }
+  }
+
+  .bubble {
+   border-radius: 9999px;
+   position: absolute;
+   opacity: 0.45;
+   z-index: 0;
+   filter: blur(1.5px);
+   mix-blend-mode: screen;
+  }
+
   @keyframes typeErase {
     
       0% {
