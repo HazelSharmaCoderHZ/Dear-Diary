@@ -1,9 +1,10 @@
-"use client";
+'use client';
 import { useEffect, useState } from "react";
 import { onAuthStateChanged } from "firebase/auth";
 import { auth } from "../../firebase/firebaseconfig";
 import { useRouter } from "next/navigation";
 import { motion } from "framer-motion";
+import Link from "next/link";
 
 export default function DashboardPage() {
   const [loading, setLoading] = useState(true);
@@ -56,14 +57,16 @@ export default function DashboardPage() {
         </motion.div>
 
         <div className="flex flex-col sm:flex-row mt-12 gap-17">
-          <motion.button
+          <Link href="/write">
+           <motion.button
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
-            onClick={() => router.push("/addnote")}
+            
             className="bg-cyan/200 bg-opacity-90 backdrop-blur-md hover:bg-cyan-200 hover:text-black text-white px-8 py-4 rounded-2xl shadow-lg text-xl font-semibold transition duration-300"
-          >
+           >
             ✍️ Pen Today’s Thought
-          </motion.button>
+           </motion.button> 
+          </Link>
 
           <motion.button
             whileHover={{ scale: 1.05 }}

@@ -293,7 +293,7 @@ body {
 .secondpageanim{
   background: linear-gradient(-45deg, #460c29, #371c52, #170c1d, #340404);
   background-size: 400% 400%;
-  animation: gradientBGG 16s ease infinite;
+  animation: gradientBGG 14s ease infinite;
   height: 100vh;
   display: flex;
   justify-content: center;

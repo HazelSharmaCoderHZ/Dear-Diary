@@ -1,8 +1,10 @@
+'use client';
 import { signInWithPopup } from "firebase/auth";
-import { auth, provider } from "../firebase/config";
-import { useRouter } from "next/router";
+import { auth, provider } from "../../firebase/firebaseconfig";
+
+import { useRouter } from "next/navigation"; 
 import { useEffect } from "react";
-import { useAuth } from "../context/AuthContext";
+import { useAuth } from "../../context/AuthContext";
 
 
 export default function Login() {
