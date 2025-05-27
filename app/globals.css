@@ -77,12 +77,73 @@
   }
   }
 
+
+  @keyframes float6 {
+  0% {
+    transform: translate(0, 0) scale(1);
+  }
+  50% {
+    transform: translate(-25px, -35px) scale(1.1);
+  }
+  100% {
+    transform: translate(0, 0) scale(1);
+  }
+  }
+
+  @keyframes float7 {
+  0% {
+    transform: translate(0, 0) scale(1);
+  }
+  50% {
+    transform: translate(30px, -25px) scale(0.95);
+  }
+  100% {
+    transform: translate(0, 0) scale(1);
+  }
+  }
+
+  @keyframes float8 {
+  0% {
+    transform: translate(0, 0) scale(1);
+  }
+  50% {
+    transform: translate(-20px, -40px) scale(1.05) rotate(5deg);
+  }
+  100% {
+    transform: translate(0, 0) scale(1);
+  }
+  }
+
+  @keyframes float9 {
+  0% {
+    transform: translate(0, 0) scale(1);
+  }
+  50% {
+    transform: translate(25px, -10px) scale(1.2) rotate(-3deg);
+  }
+  100% {
+    transform: translate(0, 0) scale(1);
+  }
+  }
+
+  @keyframes float10 {
+  0% {
+    transform: translate(0, 0) scale(1);
+  }
+  50% {
+    transform: translate(-30px, -30px) scale(0.9) rotate(2deg);
+  }
+  100% {
+    transform: translate(0, 0) scale(1);
+  }
+  }
+
   .bubble {
-   border-radius: 9999px;
+   border-radius: 99999px;
    position: absolute;
    opacity: 0.45;
    z-index: 0;
-   filter: blur(1.5px);
+   filter: blur(1.2px);
    mix-blend-mode: screen;
   }
 
@@ -273,6 +334,27 @@ body {
   background: linear-gradient(-45deg, #db016e, #6a1cb7, #833fa5, #580404);
   background-size: 400% 400%;
   animation: gradientBGG 15s ease infinite;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+@keyframes gradientBGG {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+.thirdpageanim{
+  background: linear-gradient(-45deg, #03fdc7, #232780, #b75aba, #ff0000);
+  background-size: 400% 400%;
+  animation: gradientBGG 14s ease infinite;
   height: 100vh;
   display: flex;
   justify-content: center;

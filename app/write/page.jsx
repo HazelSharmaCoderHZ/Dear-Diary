@@ -4,6 +4,8 @@ import { useEffect, useState } from 'react';
 import { auth, db } from '@/firebase/firebaseconfig';
 import { doc, setDoc } from 'firebase/firestore';
 import { useRouter } from 'next/navigation';
+import Link from 'next/link';
+
 
 export default function WritePage() {
   const [note, setNote] = useState('');
@@ -56,21 +58,23 @@ export default function WritePage() {
       {formattedDate && (
         <p className="text-gray-600 text-lg sm:text-xl mb-2">{formattedDate}</p>
       )}
-      <h1 className="text-3xl sm:text-4xl font-extrabold mb-6 text-center text-gray-800">
+      <h1 className="text-3xl sm:text-4xl  font-extrabold mb-6 text-center text-gray-800">
         📝 Write Your Thoughts for Today
       </h1>
       <textarea
-        className="w-full max-w-4xl box-shadow: 0 0 10px rgba(155, 89, 182, 0.3) h-78 p-4 rounded-xl border border-gray-300 bg-gradient-to-r from-yellow-50 via-yellow-100 to-yellow-200 shadow-md resize-none text-lg"
+        className="w-full max-w-4xl box-shadow: 0 0 10px rgba(155, 89, 182, 0.3) h-78 p-4 rounded-xl border border-gray-300 bg-gradient-to-r from-white via-yellow-50 to-yellow-100 shadow-md resize-none text-lg"
         placeholder="Pour your heart here..."
         value={note}
         onChange={(e) => setNote(e.target.value)}
       />
-      <button
+      <Link href= "/saved">
+       <button
         onClick={saveNote}
-        className="mt-6 bg-purple-600 hover:bg-purple-300 hover:text-black  text-white text-lg px-6 py-3 rounded-lg shadow-md"
-      >
-        Save Note
-      </button>
+        className="mt-6 bg-purple-600 hover:bg-blue-400 hover:text-black  text-white text-lg px-6 py-2 rounded-lg shadow-md"
+       >
+       ✅ Save Note
+       </button>
+      </Link>
     </div>
   );
 }

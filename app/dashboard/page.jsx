@@ -25,6 +25,7 @@ export default function DashboardPage() {
   if (loading) return <div className="p-10 text-center text-white">Loading...</div>;
 
   return (
+    
     <div className="secondpageanim relative overflow-hidden">
     {/* Animated Bubbles */}
    <div className="bubble bg-cyan-300 w-28 h-28 top-13 left-17 animate-[float1_8s_ease-in-out_infinite]"></div>
@@ -51,7 +52,7 @@ export default function DashboardPage() {
           <p className="text-base sm:text-xl text-white/90 leading-relaxed">
             Your thoughts are safe with us!
           </p>
-          <p className="text-base sm:text-xl italic font-cursive text-white/80 mt-1 leading-relaxed">
+          <p className="text-base sm:text-xl italic font-cursive text-white/60 mt-1 leading-relaxed">
             “Journaling isn’t just writing — it’s therapy on paper”
           </p>
         </motion.div>
