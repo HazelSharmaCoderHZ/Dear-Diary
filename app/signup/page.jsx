@@ -23,7 +23,7 @@ export default function SignupPage() {
   return (
    <div className= "animatedbg">
     <div className="min-h-screen flex flex-col items-center justify-center">
-      <div className="bg-black-800 bg-opacity-50 backdrop-blur-md p-11 rounded-2xl shadow-md text-center max-w-ls w-full">
+      <div className="bg-white/10 shd bg-opacity-50 backdrop-blur-md p-11 rounded-2xl  shadow-md text-center max-w-ls w-full">
         <h1 className="text-6xl font-bold mb-3 text-cyan-100">Create Your Account</h1>
         <form onSubmit={handleSignup}>
           <input
@@ -44,7 +44,7 @@ export default function SignupPage() {
           />
           <button
             type="submit"
-            className="bg-purple-500 text-white py-2 px-4 rounded-xl hover:bg-purple-300 transition w-50"
+            className="bg-purple-500 text-white py-2 px-4 rounded-xl hover:bg-purple-300 transition w-50 border border-purple/30"
           >
             Sign Up
           </button>

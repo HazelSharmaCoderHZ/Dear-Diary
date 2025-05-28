@@ -4,6 +4,7 @@ import { useEffect, useState } from "react";
 import { collection, getDocs } from "firebase/firestore";
 import { auth, db } from "@/firebase/firebaseconfig";
 import { useRouter } from "next/navigation";
+import { addDoc, serverTimestamp } from 'firebase/firestore';
 
 export default function ViewNotesPage() {
   const [notes, setNotes] = useState([]);

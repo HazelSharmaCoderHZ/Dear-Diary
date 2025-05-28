@@ -2,10 +2,9 @@
 
 import { useEffect, useState } from 'react';
 import { auth, db } from '@/firebase/firebaseconfig';
-import { doc, setDoc } from 'firebase/firestore';
+import { collection, addDoc, serverTimestamp } from 'firebase/firestore';
 import { useRouter } from 'next/navigation';
 import Link from 'next/link';
-
 
 export default function WritePage() {
   const [note, setNote] = useState('');
@@ -24,7 +23,7 @@ export default function WritePage() {
     return () => unsubscribe();
   }, [router]);
 
-  // Format date only after the component mounts (client side only)
+  // Format date to display at top
   useEffect(() => {
     const today = new Date();
     const weekday = today.toLocaleDateString('en-IN', { weekday: 'long' });
@@ -34,18 +33,17 @@ export default function WritePage() {
     setFormattedDate(`${weekday} | ${day} ${month} | ${year}`);
   }, []);
 
-
   const saveNote = async () => {
     if (!note.trim()) return alert('Note cannot be empty!');
     const today = new Date().toISOString().split('T')[0];
 
     try {
-      await setDoc(doc(db, 'users', userId, 'notes', today), {
+      const notesRef = collection(db, 'users', userId, 'notes'); 
+      await addDoc(notesRef, {
         note,
         date: today,
-        timestamp: new Date(),
+        timestamp: serverTimestamp(), 
       });
-      alert('Note saved successfully!');
       
     } catch (error) {
       console.error('Error saving note:', error);
@@ -58,7 +56,7 @@ export default function WritePage() {
       {formattedDate && (
         <p className="text-gray-600 text-lg sm:text-xl mb-2">{formattedDate}</p>
       )}
-      <h1 className="text-3xl sm:text-4xl  font-extrabold mb-6 text-center text-gray-800">
+      <h1 className="text-3xl sm:text-4xl font-extrabold mb-6 text-center text-gray-800">
         📝 Write Your Thoughts for Today
       </h1>
       <textarea
@@ -67,13 +65,13 @@ export default function WritePage() {
         value={note}
         onChange={(e) => setNote(e.target.value)}
       />
-      <Link href= "/saved">
-       <button
-        onClick={saveNote}
-        className="mt-6 bg-purple-600 hover:bg-blue-400 hover:text-black  text-white text-lg px-6 py-2 rounded-lg shadow-md"
-       >
-       ✅ Save Note
-       </button>
+      <Link href="/saved">
+        <button
+          onClick={saveNote}
+          className="mt-6 bg-purple-600 hover:bg-blue-400 hover:text-black text-white text-lg px-6 py-2 rounded-lg shadow-md"
+        >
+          ✅ Save Note
+        </button>
       </Link>
     </div>
   );

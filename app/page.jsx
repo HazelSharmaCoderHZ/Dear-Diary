@@ -17,7 +17,7 @@ export default function LoginCard() {
       await signInWithEmailAndPassword(auth, email, password);
       router.push("/dashboard");
     } catch (error) {
-      alert("Login failed: " + error.message);
+      alert("Login failed: Invalid credentials");
     }
   };
 
@@ -72,8 +72,8 @@ export default function LoginCard() {
               className="p-2 border bg-purple-450 border-gray-400 rounded focus:outline-none focus:ring-2 focus:ring-purple-500"
               required
             />
-            <button type="submit" className="bg-cyan-600 w-50 mx-auto text-white p-2 rounded hover:bg-cyan-400 transition">
-              🌙 Open My Diary
+            <button type="submit" className="bg-cyan-500 w-50 mx-auto text-white p-2 rounded hover:bg-cyan-300 hover:text-purple-900 transition">
+              📖 Open My Diary
             </button>
             <p className="text-ls text-center mt-1">
               New user?{" "}
