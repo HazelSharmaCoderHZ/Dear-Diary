@@ -143,7 +143,7 @@
    position: absolute;
    opacity: 1;
    z-index: 0;
-   filter: blur(1px);
+   
    mix-blend-mode: screen;
   }
 
@@ -391,4 +391,26 @@ body {
   100% {
     background-position: 0% 50%;
   }
+}
+
+.fourthpageanim{
+  background: linear-gradient(-45deg, #405de6, #833ab4, #c1356d, #f7f301);
+  background-size: 400% 400%;
+  animation: gradientBGG 17s ease infinite;
+  
+}
+@keyframes gradientBGG {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+.shd{
+  text-shadow: 0 0 5px rgba(0,0,0,0.7)
 }

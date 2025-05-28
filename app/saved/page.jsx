@@ -19,8 +19,6 @@ export default function SavedPage() {
 
   return (
     <div className="thirdpageanim relative overflow-hidden">
-   
-
      <div className="min-h-screen flex flex-col items-center justify-center  text-center px-4">
       <div className="bg-white shadow-2xl rounded-3xl p-10 max-w-md w-full border-3 border-purple-300">
         <h1 className="text-4xl font-bold text-purple-700 mb-4">🎉 Note Saved!</h1>

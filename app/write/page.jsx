@@ -46,7 +46,7 @@ export default function WritePage() {
         timestamp: new Date(),
       });
       alert('Note saved successfully!');
-      router.push('/dashboard');
+      
     } catch (error) {
       console.error('Error saving note:', error);
       alert('Error saving note!');

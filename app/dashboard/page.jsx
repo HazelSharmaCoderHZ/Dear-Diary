@@ -69,14 +69,17 @@ export default function DashboardPage() {
            </motion.button> 
           </Link>
 
-          <motion.button
+
+          <Link href="/viewnotes">
+           <motion.button
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
             onClick={() => router.push("/viewnotes")}
             className="bg-purple/500 bg-opacity-50 backdrop-blur-md hover:bg-cyan-200 text-white hover:text-black px-8 py-4 rounded-2xl shadow-lg text-xl font-semibold transition duration-300"
-          >
+           >
             📖 Revisit Old Pages
-          </motion.button>
+           </motion.button>
+          </Link>
         </div>
 
         <p
