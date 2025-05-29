@@ -26,8 +26,9 @@ export default function LoginCard() {
       <div className="relative h-screen w-screen flex flex-col items-center justify-center text-white overflow-hidden">
         
         {/* Top Navigation Bar */}
-        <div className="absolute top-3 flex justify-center w-full my-0.3 z-20">
-          <div className="backdrop-blur-md bg-white/10 border border-white/20 rounded-full px-8 py-2 flex space-x-8 shadow-lg">
+        <div className="absolute top-3 flex justify-center w-full z-20 px-4">
+          <div className="backdrop-blur-md bg-white/10 border border-white/20 rounded-full px-4 sm:px-8 py-2 flex space-x-4 sm:space-x-8 shadow-lg text-sm sm:text-base">
+
             <Link href="/about" className="hover:text-cyan-300 font-semibold transition duration-300">
               About
             </Link>
@@ -44,7 +45,7 @@ export default function LoginCard() {
           transition={{ duration: 1 }}
           className="text-center mb-10"
         >
-          <h1 className="text-8xl sm:text-8.5xl mt-12 font-extrabold text-grey-100 font-serif typewriter-loop">
+          <h1 className="text-5xl sm:text-6xl md:text-7xl lg:text-8xl mt-12 font-extrabold text-grey-100 font-serif typewriter-loop">
             Dear Diary,<span className="animate-blink"></span>
           </h1>
           <p className="text-2xl sm:text-2xl italic tracking-wide font-bold mt-2 text-cyan-200 drop-shadow-xl">
@@ -53,7 +54,7 @@ export default function LoginCard() {
         </motion.div>
 
         {/* Login Box */}
-        <div className="bg-white/10 backdrop-blur-md text-black px-10 py-4 rounded-3xl shadow-xl w-[450px] sm:w-[500px] z-10 mt-4">
+        <div className="bg-white/10 backdrop-blur-md text-black px-6 sm:px-10 py-6 rounded-3xl shadow-xl w-[90%] max-w-md z-10 mt-4">
           <h2 className="text-center text-lg font-bold mb-3">LOGIN</h2>
           <form onSubmit={handleLogin} className="flex flex-col space-y-2">
             <input
