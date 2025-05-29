@@ -14,7 +14,10 @@ const geistMono = Geist_Mono({
 
 export const metadata = {
   title: "Dear Diary 📖",
-  description: "Hazel's personal journaling app",
+  description: "Your personal journaling app",
+  icons: {
+    icon: '/favicon.ico',
+  },
 };
 
 export default function RootLayout({ children }) {
@@ -28,3 +31,5 @@ export default function RootLayout({ children }) {
     </html>
   );
 }
+
+
