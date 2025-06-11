@@ -10,12 +10,12 @@ export default function LoginCard() {
   const router = useRouter();
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
-  const [isLoading, setIsLoading] = useState(true); // NEW loading state
+  const [isLoading, setIsLoading] = useState(true); 
 
   useEffect(() => {
     const timer = setTimeout(() => {
       setIsLoading(false);
-    }, 7500); // 7.5 seconds
+    }, 2000); 
 
     return () => clearTimeout(timer);
   }, []);

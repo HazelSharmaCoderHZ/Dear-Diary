@@ -16,6 +16,9 @@ export default function AboutPage() {
         <Link href="/" className="mt-10 text-cyan-300 hover:underline">
           ⬅ Back to Login
         </Link>
+        <Link href="/author" className="mt-2 text-cyan-300 hover:underline">
+          ⬅ About Author
+        </Link>
       </div>
     </div>
   );

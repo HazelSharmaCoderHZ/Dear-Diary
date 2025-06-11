@@ -23,7 +23,7 @@ export default function WritePage() {
     return () => unsubscribe();
   }, [router]);
 
-  // Format date to display at top
+  
   useEffect(() => {
     const today = new Date();
     const weekday = today.toLocaleDateString('en-IN', { weekday: 'long' });
