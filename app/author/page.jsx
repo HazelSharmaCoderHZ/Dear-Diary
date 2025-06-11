@@ -3,15 +3,15 @@ import React from "react";
 const ProfileIntro = () => {
   return (
     <div className="flex flex-col items-center justify-center min-h-screen bg-black text-white">
-      {/* Spinner with Image */}
-      <div className="relative w-[220px] h-[220px] mb-8">
-        {/* Spinning outer circle */}
+      
+      <div className="relative w-[220px] h-[220px] mb-6">
+      
         <div className="absolute inset-0 rounded-full animate-spin bg-gradient-to-tr from-purple-500 to-cyan-400 blur-md shadow-2xl" />
 
-        {/* Blurred background circle */}
+       
         <div className="absolute inset-0 rounded-full bg-neutral-900 blur-xl" />
 
-        {/* Your Image */}
+    
         <img
           src="/hazel.jpg"
           alt="Hazel"
