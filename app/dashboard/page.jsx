@@ -13,7 +13,7 @@ export default function DashboardPage() {
   useEffect(() => {
     const unsubscribe = onAuthStateChanged(auth, (user) => {
       if (!user) {
-        router.push("/"); // redirect to login if not authenticated
+        router.push("/"); 
       } else {
         setLoading(false);
       }
@@ -65,7 +65,7 @@ export default function DashboardPage() {
       <motion.button
         whileHover={{ scale: 1.05 }}
         whileTap={{ scale: 0.95 }}
-        className="bg-white/10 backdrop-blur-md hover:bg-cyan-50 hover:text-black text-white px-7 py-3 rounded-2xl shadow-lg text-lg font-semibold transition duration-300"
+        className="bg-white/30 backdrop-blur-md hover:bg-cyan-50 hover:text-black text-white px-7 py-3 rounded-2xl shadow-lg text-lg font-semibold transition border duration-300"
       >
         ✍️ Pen Today’s Thought
       </motion.button>
@@ -75,7 +75,7 @@ export default function DashboardPage() {
       <motion.button
         whileHover={{ scale: 1.05 }}
         whileTap={{ scale: 0.95 }}
-        className="bg-white/10 backdrop-blur-md hover:bg-cyan-50 hover:text-black text-white px-7 py-3 rounded-2xl shadow-lg text-lg font-semibold transition duration-300"
+        className="bg-white/30 backdrop-blur-md hover:bg-cyan-50 hover:text-black text-white px-7 py-3 rounded-2xl shadow-lg text-lg font-semibold border transition duration-300"
       >
         🌈 Your MoodMap
       </motion.button>
@@ -88,7 +88,7 @@ export default function DashboardPage() {
       <motion.button
         whileHover={{ scale: 1.05 }}
         whileTap={{ scale: 0.95 }}
-        className="bg-white/10 backdrop-blur-md hover:bg-cyan-50 hover:text-black text-white px-7 py-3 rounded-2xl shadow-lg text-lg font-semibold transition duration-300"
+        className="bg-white/30 backdrop-blur-md hover:bg-cyan-50 hover:text-black text-white px-7 py-3 rounded-2xl shadow-lg text-lg font-semibold border transition duration-300"
       >
         📖 Revisit Your Old Pages
       </motion.button>
@@ -98,7 +98,7 @@ export default function DashboardPage() {
       <motion.button
         whileHover={{ scale: 1.05 }}
         whileTap={{ scale: 0.95 }}
-        className="bg-white/10 backdrop-blur-md hover:bg-cyan-50 hover:text-black text-white px-7 py-3 rounded-2xl shadow-lg text-lg font-semibold transition duration-300"
+        className="bg-white/30 backdrop-blur-md hover:bg-cyan-50 hover:text-black text-white px-7 py-3 rounded-2xl shadow-lg text-lg font-semibold border transition duration-300"
       >
         📝 Edit / Delete Past Notes
       </motion.button>
@@ -111,7 +111,7 @@ export default function DashboardPage() {
   onClick={() => router.push("/")}
   className="mt-11 text-sm text-white/70 hover:text-white cursor-pointer transition duration-300 underline text-center"
 >
-  ⬅️ Back to <span className="text-cyan-300 hover:text-cyan-200">Login Page</span>
+  ⬅️ Back to <span className="text-blue-500 hover:text-cyan-200">Login Page</span>
 </p>
 
       </div>    
