@@ -36,7 +36,7 @@ export default function DashboardPage() {
    <div className="bubble bg-cyan-300 w-30 h-30 bottom-5 right-17 animate-[float5_11s_ease-in-out_infinite]"></div>
 
       {/* Main Content */}
-      <div className="min-h-screen flex flex-col items-center justify-start text-white px-4 pt-10 sm:pt-16 relative z-10">
+      <div className="min-h-screen flex flex-col items-center text-center justify-start text-white px-4 pt-10 sm:pt-16 relative z-10">
         <motion.div
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
@@ -57,52 +57,68 @@ export default function DashboardPage() {
           </p>
         </motion.div>
 
-        
+      
        <div className="flex flex-col items-center gap-6 mt-8">
-       {/* Top Button */}
-        <div>
-         <Link href="/write">
-          <motion.button
-           whileHover={{ scale: 1.05 }}
-           whileTap={{ scale: 0.95 }}
-           className="bg-white/10 bg-opacity-900 backdrop-blur-md hover:bg-cyan-50 hover:text-black text-white px-7 py-3 rounded-2xl shadow-lg text-lg font-semibold transition duration-300"
-          >
-           ✍️ Pen Today’s Thought
-          </motion.button>
-         </Link>
-        </div>
+  {/* ⭐ Top Row - 2 Buttons */}
+  <div className="flex flex-col sm:flex-row items-center gap-6">
+    <Link href="/write">
+      <motion.button
+        whileHover={{ scale: 1.05 }}
+        whileTap={{ scale: 0.95 }}
+        className="bg-white/10 backdrop-blur-md hover:bg-cyan-50 hover:text-black text-white px-7 py-3 rounded-2xl shadow-lg text-lg font-semibold transition duration-300"
+      >
+        ✍️ Pen Today’s Thought
+      </motion.button>
+    </Link>
 
-  {/* Row of Bottom Two Buttons */}
-        <div className="flex flex-col sm:flex-row items-center gap-6">
-         <Link href="/viewnotes">
-         <motion.button
-          whileHover={{ scale: 1.05 }}
-          whileTap={{ scale: 0.95 }}
-          className="bg-white/10 bg-opacity-50 backdrop-blur-md hover:bg-cyan-50 text-white hover:text-black px-7 py-3 rounded-2xl shadow-lg text-lg font-semibold transition duration-300"
-         >
-         📖 Revisit Your Old Pages
-         </motion.button>
-         </Link>
+    <Link href="/moodmap">
+      <motion.button
+        whileHover={{ scale: 1.05 }}
+        whileTap={{ scale: 0.95 }}
+        className="bg-white/10 backdrop-blur-md hover:bg-cyan-50 hover:text-black text-white px-7 py-3 rounded-2xl shadow-lg text-lg font-semibold transition duration-300"
+      >
+        🌈 Your MoodMap
+      </motion.button>
+    </Link>
+  </div>
 
-         <Link href="/editnotes">
-         <motion.button
-          whileHover={{ scale: 1.05 }}
-          whileTap={{ scale: 0.95 }}
-          className="bg-white/10 bg-opacity-50 backdrop-blur-md hover:bg-cyan-50 hover:text-black text-white px-7 py-3 rounded-2xl shadow-lg text-lg font-semibold transition duration-300"
-         >
-         📝 Edit / Delete Past Notes
-         </motion.button>
-         </Link>
-        </div>
+  {/* ⭐ Bottom Row - 2 Buttons */}
+  <div className="flex flex-col sm:flex-row items-center gap-6">
+    <Link href="/viewnotes">
+      <motion.button
+        whileHover={{ scale: 1.05 }}
+        whileTap={{ scale: 0.95 }}
+        className="bg-white/10 backdrop-blur-md hover:bg-cyan-50 hover:text-black text-white px-7 py-3 rounded-2xl shadow-lg text-lg font-semibold transition duration-300"
+      >
+        📖 Revisit Your Old Pages
+      </motion.button>
+    </Link>
+
+    <Link href="/editnotes">
+      <motion.button
+        whileHover={{ scale: 1.05 }}
+        whileTap={{ scale: 0.95 }}
+        className="bg-white/10 backdrop-blur-md hover:bg-cyan-50 hover:text-black text-white px-7 py-3 rounded-2xl shadow-lg text-lg font-semibold transition duration-300"
+      >
+        📝 Edit / Delete Past Notes
+      </motion.button>
+    </Link>
+  </div>
+</div>
+
+{/* Back to Login */}
+<p
+  onClick={() => router.push("/")}
+  className="mt-11 text-sm text-white/70 hover:text-white cursor-pointer transition duration-300 underline text-center"
+>
+  ⬅️ Back to <span className="text-cyan-300 hover:text-cyan-200">Login Page</span>
+</p>
+
+      </div>    
+      
+
+        
       </div>
-
-        <p
-          onClick={() => router.push("/")}
-          className="mt-11 text-sm text-white/70 hover:text-white cursor-pointer transition duration-300 underline"
-        >
-          ⬅️ Back to <span className="text-cyan-300 hover:text-cyan-200">Login Page</span>
-        </p>
-      </div>
-    </div>
+    
   );
 }
