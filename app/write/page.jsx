@@ -60,7 +60,7 @@ export default function WritePage() {
         📝 Write Your Thoughts for Today
       </h1>
       <textarea
-        className="w-full max-w-4xl box-shadow: 0 0 10px rgba(155, 89, 182, 0.3) h-78 p-4 rounded-xl border border-gray-300 bg-gradient-to-r from-white via-yellow-50 to-yellow-100 shadow-md resize-none text-lg"
+        className="w-full max-w-4xl text-black box-shadow: 0 0 10px rgba(155, 89, 182, 0.3) h-78 p-4 rounded-xl border border-gray-300 bg-gradient-to-r from-white via-yellow-50 to-yellow-100 shadow-md resize-none text-lg"
         placeholder="Pour your heart here..."
         value={note}
         onChange={(e) => setNote(e.target.value)}
