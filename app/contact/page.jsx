@@ -32,7 +32,7 @@ export default function ContactPage() {
           ⬅ Back to Login
         </Link>
         <Link href="/author" className="mt-2 text-cyan-300 hover:underline">
-          ⬅ About Author
+          ⬅ About The Author
         </Link>
       </div>
     </div>
