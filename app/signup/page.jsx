@@ -54,15 +54,7 @@ export default function SignupPage() {
     }
   };
 
-  if (loading) {
-    return (
-      <div className="min-h-screen bg-white flex items-center justify-center">
-        <div className="loader2">
-          <div></div><div></div><div></div><div></div><div></div>
-        </div>
-      </div>
-    );
-  }
+  
 
   return (
     <div className="min-h-screen flex flex-col md:flex-row bg-[#fafafa]">
