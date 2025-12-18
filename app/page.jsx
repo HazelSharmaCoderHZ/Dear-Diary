@@ -117,25 +117,28 @@ export default function DearDiaryPremiumLanding() {
       <div className="absolute top-1/2 -right-40 h-[600px] w-[600px] bg-fuchsia-300/30 rounded-full blur-[180px] animate-pulse"></div>
 
       {/* NAVBAR */}
-      <nav className="fixed top-0 w-full z-50 backdrop-blur-xl bg-white/70 border-b border-purple-100">
-        <div className="max-w-7xl mx-auto px-8 py-4 flex justify-between items-center">
-          <h1 className="text-2xl font-extrabold bg-gradient-to-r from-purple-600 to-fuchsia-500 bg-clip-text text-transparent">
-            Dear Diary
-          </h1>
+<nav className="fixed top-0 w-full z-50 backdrop-blur-xl bg-white/70 border-b border-purple-100">
+  <div className="max-w-7xl mx-auto px-8 py-4 flex justify-between items-center">
+    {/* Hidden on small screens, flex on medium+ */}
+    <h1 className="hidden md:block text-2xl font-extrabold bg-gradient-to-r from-purple-600 to-fuchsia-500 bg-clip-text text-transparent">
+      Dear Diary
+    </h1>
 
-          <div className="flex items-center gap-8 text-sm font-medium">
-            <a href="#about" className="hover:text-purple-600 transition">About</a>
-            <a href="#services" className="hover:text-purple-600 transition">Services</a>
-            <a href="#contact" className="hover:text-purple-600 transition">Contact</a>
-            <Link
-              href="/login"
-              className="px-5 py-2 rounded-full bg-gradient-to-r from-purple-600 to-fuchsia-500 text-white shadow-lg hover:scale-105 transition"
-            >
-              Login
-            </Link>
-          </div>
-        </div>
-      </nav>
+    <div className="flex items-center gap-8 text-sm font-medium w-full md:w-auto justify-center md:justify-end">
+      <a href="#about" className="hover:text-purple-600 transition">About</a>
+      <a href="#services" className="hover:text-purple-600 transition">Services</a>
+      <a href="#contact" className="hover:text-purple-600 transition">Contact</a>
+      
+      {/* Hidden on small screens, flex on medium+ */}
+      <Link
+        href="/login"
+        className="hidden md:flex px-5 py-2 rounded-full bg-gradient-to-r from-purple-600 to-fuchsia-500 text-white shadow-lg hover:scale-105 transition"
+      >
+        Login
+      </Link>
+    </div>
+  </div>
+</nav>
 
       {/* HERO */}
       <section className="min-h-screen flex items-center justify-center pt-32 px-8">
