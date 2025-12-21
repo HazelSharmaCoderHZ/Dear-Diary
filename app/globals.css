@@ -817,8 +817,7 @@ body {
 }
 
 /* FORCE month name color */
-.react-calendar__navigation__label,
-.react-calendar__navigation__label > span {
+.react-calendar__navigation__label {
   color: #000000 !important;
   font-weight: 900 !important;
 }
@@ -828,11 +827,11 @@ body {
   color: #000000 !important;
 }
 
-
 .react-calendar__month-view__days__day {
   padding: 0.5rem;
   border-radius: 0.475rem;
   transition: background 0.3s ease;
+  color:black
 }
 
 .react-calendar__tile--now {
@@ -858,8 +857,50 @@ body {
 
 .react-calendar__month-view__days__day--neighboringMonth {
   opacity: 0.5;
-  color: #fff;
+  color: black;
 }
+/* Year view month names */
+.react-calendar__year-view__months__month {
+  color: black !important;
+  font-weight: 700;
+}
+
+/* Hover month */
+.react-calendar__year-view__months__month:hover {
+  background: rgba(0, 0, 0, 0.08) !important;
+  border-radius: 12px;
+}
+/* Decade view: all years black */
+.react-calendar__decade-view__years__year {
+  color: black !important;
+  font-weight: 700;
+}
+
+/* Active year */
+.react-calendar__decade-view__years__year.react-calendar__tile--active {
+  background: black !important;
+  color: white !important;
+  border-radius: 12px;
+}
+
+/* Hover */
+.react-calendar__decade-view__years__year:hover {
+  background: rgba(0, 0, 0, 0.08) !important;
+  border-radius: 12px;
+}
+.react-calendar__century-view__decades__decade {
+  color: black !important;
+  font-weight: 700;
+}
+.react-calendar * {
+  color: black !important;
+}
+
+.react-calendar button,
+.react-calendar button span {
+  color: black !important;
+}
+
 
 
 .mood-good {

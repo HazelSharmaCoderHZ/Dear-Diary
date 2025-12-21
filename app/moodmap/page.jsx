@@ -45,7 +45,7 @@ export default function MoodMapPage() {
   }, [currentUser]);
 
   const Loader3 = () => (
-    <div className="min-h-screen flex justify-center items-center bg-[#4a148c]">
+    <div className="min-h-screen flex justify-center items-center bg-purple-500">
       <div className="loader3 mx-2"></div>
       <div className="loader3 mx-2"></div>
       <div className="loader3 mx-2"></div>
@@ -132,29 +132,29 @@ export default function MoodMapPage() {
 
       {/* Mood Selector Dialog */}
       <Dialog open={showModal} onOpenChange={setShowModal}>
-        <DialogContent className="bg-slate-900/90 backdrop-blur-xl rounded-[2.5rem] border border-white/10 shadow-2xl max-w-sm text-slate-900">
+        <DialogContent className="bg-white backdrop-blur-xl rounded-[2.5rem] border border-white/10 shadow-2xl max-w-sm text-slate-500">
           <DialogHeader>
-            <DialogTitle className="text-2xl font-black text-center text-slate-800">
+            <DialogTitle className="text-2xl font-black text-center text-black">
               Daily Pulse
             </DialogTitle>
-            <p className="text-center text-slate-500 text-sm">How was {selectedDate?.toLocaleDateString('en-GB', { day: 'numeric', month: 'long' })}?</p>
+            <p className="text-center text-black text-sm">How was {selectedDate?.toLocaleDateString('en-GB', { day: 'numeric', month: 'long' })}?</p>
           </DialogHeader>
           <div className="grid grid-cols-1 gap-3 mt-6">
             <Button 
               onClick={() => handleMood("good")} 
-              className="py-7 rounded-2xl bg-green-500/10 text-green-400 hover:bg-green-500/20 border border-green-500/20 transition-all text-lg font-bold"
+              className="py-7 rounded-2xl bg-green-500/60 text-slate-500 hover:bg-green-500/20 border border-green-500/20 transition-all text-lg font-bold"
             >
               😊 Vibrant & Good
             </Button>
             <Button 
               onClick={() => handleMood("average")} 
-              className="py-7 rounded-2xl bg-yellow-500/10 text-yellow-400 hover:bg-yellow-500/20 border border-yellow-500/20 transition-all text-lg font-bold"
+              className="py-7 rounded-2xl bg-yellow-500/60 text-slate-500 hover:bg-yellow-500/20 border border-yellow-500/20 transition-all text-lg font-bold"
             >
               😐 Just Fine
             </Button>
             <Button 
               onClick={() => handleMood("bad")} 
-              className="py-7 rounded-2xl bg-red-500/10 text-red-400 hover:bg-red-500/20 border border-red-500/20 transition-all text-lg font-bold"
+              className="py-7 rounded-2xl bg-red-500/60 text-slate-500 hover:bg-red-500/20 border border-red-500/20 transition-all text-lg font-bold"
             >
               ☹️ A Bit Tough
             </Button>
@@ -166,7 +166,7 @@ export default function MoodMapPage() {
       <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ delay: 0.5 }}>
         <Button
           onClick={() => router.push('/dashboard')}
-          className="mt-12 bg-transparent text-purple-800 hover:text-fuchsia-400 hover:bg-white/5 px-8 py-6 rounded-2xl border border-white/10 transition-all font-bold uppercase tracking-widest text-xs"
+          className="mt-12 bg-transparent text-purple-500 hover:text-fuchsia-400 hover:bg-white/5 px-8 py-6 rounded-2xl border border-white/10 transition-all font-bold uppercase tracking-widest text-xs"
         >
           ← Return to Dashboard
         </Button>
