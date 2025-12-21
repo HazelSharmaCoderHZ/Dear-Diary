@@ -57,21 +57,21 @@ export default function SignupPage() {
   
 
   return (
-    <div className="min-h-screen flex flex-col md:flex-row bg-[#fafafa]">
+    <div className="min-h-screen flex flex-col md:flex-row bg-purple-100">
       {/* LEFT SIDE: IMAGE */}
       <div className="relative hidden md:flex md:w-1/2 items-center justify-center overflow-hidden">
         <img
-          src="/img5.png"
+          src="/img4.png"
           alt="Journaling"
           className="absolute inset-0 w-full h-full object-cover"
         />
-        <div className="absolute inset-0 bg-purple-900/10 backdrop-none" />
+        <div className="absolute inset-0 backdrop-none" />
       </div>
 
       {/* RIGHT SIDE: FORM */}
       <div className="flex-1 flex items-center justify-center p-8 sm:p-12 lg:p-20 relative">
         {/* Decorative Background Blur */}
-        <div className="absolute top-0 right-0 w-64 h-64 bg-purple-100 blur-[100px] -z-10" />
+        <div className="absolute top-0 right-0 w-64 h-64 blur-[100px] bg-purple-100  -z-10" />
 
         <motion.div 
           initial={{ opacity: 0, y: 20 }}

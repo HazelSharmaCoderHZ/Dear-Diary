@@ -45,7 +45,7 @@ export default function DashboardPage() {
   ];
 
   return (
-    <div className="relative min-h-screen w-full bg-[#fafafa] overflow-hidden font-sans text-slate-900">
+    <div className="relative min-h-screen w-full fourthpageanim overflow-hidden font-sans text-slate-900">
       
       {/* 🔮 Background Magic */}
       <div className="absolute top-[-10%] left-[-10%] w-[70%] h-[70%] rounded-full bg-purple-100/50 blur-[120px] animate-pulse" />

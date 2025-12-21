@@ -418,7 +418,7 @@ body {
 }
 
 .fourthpageanim{
-  background: linear-gradient(-45deg, #405de6, #833ab4, #c1356d, #f7f301);
+  background: linear-gradient(-45deg, #b1eef1, #c4c4ed, #FFF1F5, #ECFEFF);
   background-size: 400% 400%;
   animation: gradientBGG 17s ease infinite;
 
@@ -455,6 +455,40 @@ body {
   100% {
     background-position: 0% 50%;
   }
+}
+
+
+.bg-container {
+  position: relative;
+  width: 100%;
+  min-height: 100vh;
+  background-color: #6a1b9a; /* The base purple from your image */
+  overflow: hidden;
+}
+
+.blob {
+  position: fixed;
+  z-index: 0;
+  opacity: 0.8; /* Adjust for softness */
+}
+
+.blob-top {
+  top: -10%;
+  right: -5%;
+  width: 60%; /* Scale it up */
+  fill: #4a148c; /* Darker purple layer */
+}
+
+.blob-bottom {
+  bottom: -15%;
+  left: -10%;
+  width: 70%;
+  fill: #311b92; /* Deepest purple layer */
+}
+
+.content {
+  position: relative;
+  z-index: 1; /* Ensures calendar stays on top */
 }
 
 .loader {
@@ -778,11 +812,22 @@ body {
   margin-bottom: 1rem;
 }
 
-.react-calendar__navigation button {
-  color: black; 
-  font-size: 1.2rem;
-  font-weight: bold;
+.react-calendar__navigation__label {
+  color:black
 }
+
+/* FORCE month name color */
+.react-calendar__navigation__label,
+.react-calendar__navigation__label > span {
+  color: #000000 !important;
+  font-weight: 900 !important;
+}
+
+/* Arrows only */
+.react-calendar__navigation__arrow {
+  color: #000000 !important;
+}
+
 
 .react-calendar__month-view__days__day {
   padding: 0.5rem;

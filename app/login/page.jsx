@@ -64,12 +64,12 @@ export default function Login() {
   };
 
   return (
-    <div className="min-h-screen flex flex-col md:flex-row bg-[#fafafa]">
+    <div className="min-h-screen flex flex-col md:flex-row bg-purple-100">
       
       {/* LEFT SIDE: PURE IMAGE */}
       <div className="relative hidden md:flex md:w-1/2 items-center justify-center overflow-hidden">
         <img
-          src="/img3.png" 
+          src="/imgg3.png" 
           alt="Reflecting"
           className="absolute inset-0 w-full h-full object-cover"
         />
